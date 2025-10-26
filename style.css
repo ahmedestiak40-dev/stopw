@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Orbitron', sans-serif;
+  color: #00fff7;
+  margin: 0;
+  animation: neonPulse 3s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 0 50px rgba(0, 255, 247, 0.7);
+  width: 350px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.digital-clock {
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+.time-display {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: #00fff7;
+  text-shadow: 0 0 15px #00fff7, 0 0 30px #00fff7, 0 0 50px #00fff7;
+  transition: all 0.2s ease;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+button {
+  background: linear-gradient(135deg, #00fff7, #0055ff);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: #000;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  text-shadow: 0 0 5px #fff;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00fff7;
+}
+
+.laps {
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.laps li {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.laps li:nth-child(odd) {
+  background: #00fff7;
+  color: #000;
+}
+
+.laps li:nth-child(even) {
+  background: #0055ff;
+  color: #fff;
+}
+
+@media (max-width: 400px) {
+  .container { width: 90%; padding: 30px 20px; }
+  .time-display { font-size: 48px; }
+  .digital-clock { font-size: 24px; }
+  button { padding: 10px 15px; font-size: 14px; }
+}
